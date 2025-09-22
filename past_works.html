@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio — Past Works</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site container">
+    <header class="header-bar">
+      <div class="brand">
+        <div class="title">My Portfolio</div>
+        <div class="sitename">Experiences on Web Design</div>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="main_page.html">Main</a>
+        <a href="past_works.html" class="active">Past Works</a>
+        <a href="what_now.html">What Now</a>
+        <button id="dark-toggle" class="toggle-btn" title="Toggle dark mode" aria-pressed="false">🌓</button>
+      </nav>
+    </header>
+
+    <main>
+      <section style="margin-top:0.75rem;">
+        <h1>How it started...</h1>
+
+        <!-- Carousel of 6 photos -->
+        <div class="carousel" aria-roledescription="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="first.jpg" alt="Screenshot of the First website about Music basically just HTML" />
+              <div class="carousel-caption"><strong>Work 1</strong>
+                You can access this website <a href="https://yannaellen.github.io/favoritebands.html" target="_blank">here</a></div>
+            </div>
+            <div class="carousel-slide">
+              <img src="second.jpg" alt="Screenshot of the Second website about Falls Church city, using basic CSS" />
+              <div class="carousel-caption"><strong>Work 2</strong>
+            You can access this website <a href="https://yannaellen.github.io/FallsChurch/falls_church.html" target="_blank">here</a></div>
+            </div>
+            <div class="carousel-slide">
+              <img src="third.jpg" alt="Screenshot of the Third website, still about Falls Church but with some pictures in the main page" />
+              <div class="carousel-caption"><strong>Work 3</strong>
+            You can access this website <a href="https://yannaellen.github.io/FallsChurch_2/falls_church.html" target="_blank">here</a></div>
+            </div>
+            <div class="carousel-slide">
+              <img src="fourth.jpg" alt="Screenshot of the Fourth website, about Brazil" />
+              <div class="carousel-caption"><strong>Work 4</strong>
+            You can access this website <a href="https://yannaellen.github.io/brasil/main_page.html" target="_blank">here</a></div>
+            </div>
+            <div class="carousel-slide">
+              <img src="fifth.jpg" alt="Screenshot of the Fifth website, working on Responsive Design, about my dog Florence" />
+              <div class="carousel-caption"><strong>Work 5</strong>
+            You can access this website <a href="https://yannaellen.github.io/Florence" target="_blank">here</a></div>
+            </div>
+            <div class="carousel-slide">
+              <img src="sixth.jpg" alt="Screenshot of the Sixth website, the current one" />
+              <div class="carousel-caption"><strong>Work 6</strong>
+            The current website.</div>
+            </div>
+          </div>
+
+          <div class="carousel-controls" aria-hidden="false">
+            <button class="carousel-prev" aria-label="Previous slide">‹ Prev</button>
+            <button class="carousel-next" aria-label="Next slide">Next ›</button>
+          </div>
+        </div>
+
+        <p style="color:var(--muted); margin-top:0.75rem;">
+        In the gallery above you can visit the websites I developed during the course. I hope you can see the improvements!
+    </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Developed by Yanna Santos. Brazilian living in the USA, 2025
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

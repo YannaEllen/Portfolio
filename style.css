@@ -1,0 +1,301 @@
+/* style.css - mobile-first */
+/* Palette variables */
+:root{
+  --p1: #71b084;
+  --p2: #9c9b9a;
+  --p3: #e8e2df;
+  --p4: #c49886;
+  --p5: #69607d;
+  --p6: #48a363;
+  --p7: #d3c4f5;
+
+  --bg: var(--p3);
+  --text: #222;
+  --muted: var(--p2);
+  --accent: var(--p1);
+  --card: #ffffff;
+  --shadow: rgba(0,0,0,0.08);
+}
+
+/* Dark mode variables (will apply when .dark is on <html> or user prefers) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #ffffff;
+    --text: #000000;
+    --muted: #000000;
+    --card: #111214;
+    --shadow: rgba(0,0,0,0.6);
+  }
+}
+html.dark {
+  --bg: #0f1113;
+  --text: #e6e6e6;
+  --muted: #ffffff;
+  --card: #111214;
+  --shadow: rgba(0,0,0,0.6);
+}
+
+/* Reset & base */
+* {box-sizing: border-box;}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  padding:0 1rem 6rem; /* space for sticky footer */
+}
+
+/* Page container */
+.site {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Header: brand left, nav right */
+.header-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem 0;
+  gap:1rem;
+}
+.brand {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.brand .title {
+  font-size:1.25rem;
+  font-weight:700;
+  color: var(--p5);
+}
+.brand .sitename {
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+/* Nav on the right */
+.site-nav {
+  display:flex;
+  gap:0.75rem;
+}
+.site-nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:0.5rem 0.7rem;
+  border-radius:8px;
+  background:transparent;
+  font-weight:600;
+}
+.site-nav a.active,
+.site-nav a:hover{
+  background: linear-gradient(135deg,var(--p7),var(--p1));
+  color:#fff;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+/* Dark mode toggle (small) */
+.toggle-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  cursor:pointer;
+  font-size:0.9rem;
+  padding:0.3rem 0.5rem;
+  border-radius:8px;
+  background:transparent;
+  border:1px solid transparent;
+}
+
+/* Page header / hero */
+.page-hero {
+  margin-top: 0.5rem;
+  padding:1rem;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+  box-shadow: 0 6px 14px var(--shadow);
+}
+html.dark .page-hero {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* h1 and lead paragraph */
+.page-hero h1{
+  margin:0 0 0.75rem 0;
+  font-size:1.15rem;
+  color: var(--p5);
+}
+.lead {
+  margin:0 0 1rem 0;
+  color:var(--text);
+  font-size:0.95rem;
+}
+
+/* calendar + citation layout */
+.calendar-wrap {
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  margin-bottom:1rem;
+}
+.calendar-and-note {
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+.calendar-embed {
+  width:100%;
+  height:360px;
+  border:0;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow: 0 6px 16px var(--shadow);
+}
+.calendar-citation {
+  align-self:flex-end;
+  font-style:italic;
+  color:var(--muted);
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:0.5rem;
+  border-radius:8px;
+  max-width:320px;
+}
+
+/* centered round photo and bio paragraph */
+.photo-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.75rem;
+  margin-top:1rem;
+}
+.photo-wrap img.photo {
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid rgba(255,255,255,0.6);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.bio {
+  max-width:720px;
+  text-align:justify;
+  padding:0 0.5rem;
+}
+
+/* Carousel on past_works page */
+.carousel {
+  position:relative;
+  width:100%;
+  max-width:980px;
+  margin:1rem auto;
+  overflow:hidden;
+  border-radius:10px;
+  background:var(--card);
+  box-shadow:0 12px 30px var(--shadow);
+}
+.carousel-track {
+  display:flex;
+  transition: transform 0.45s ease;
+}
+.carousel-slide {
+  min-width:100%;
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  align-items:center;
+}
+.carousel-slide img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
+.carousel-caption {
+  width:100%;
+  text-align:left;
+  color:#ffffff;
+  padding:0 0.5rem;
+}
+.carousel-controls {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-between;
+  pointer-events:none;
+}
+.carousel-controls button{
+  pointer-events:auto;
+  background:rgba(157, 138, 138, 0.35);
+  color:#fff;
+  border:0;
+  padding:0.5rem 0.7rem;
+  margin:0 0.5rem;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+footer {
+  background-color: #000;   /* solid black */
+  color: #fff;              /* white text for contrast */
+  text-align: center;
+  padding: 15px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+body.dark-mode footer {
+  background-color: #000;  /* stays black in dark mode */
+  color: #fff;
+}
+
+.site-footer {
+  position:sticky;
+  bottom:0;
+  margin-top:auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:0.8rem 1rem;
+  text-align:center;
+  font-size:0.9rem;
+  color:var(--muted);
+  border-top:1px solid rgba(0,0,0,0.03);
+}
+
+/* Utility */
+.container {max-width:1100px; margin:0 auto;}
+
+/* ---- Responsive breakpoints: tablet and large (third viewport layout included) ---- */
+/* Tablet: 768px and up */
+@media (min-width:768px){
+  body{padding:0 2rem 6rem;}
+  .header-bar{align-items:flex-end;}
+  .brand {flex-direction:row; gap:1rem; align-items:center;}
+  .brand .sitename{font-size:0.95rem;}
+  .page-hero {display:flex; gap:1.25rem; align-items:flex-start;}
+  .calendar-and-note {flex-direction:row; align-items:flex-start; gap:1rem;}
+  .calendar-embed {flex:1; height:360px;}
+  .calendar-citation {align-self:flex-start;}
+  .photo-wrap {flex-direction:row; align-items:center; gap:1.25rem;}
+  .photo-wrap img.photo {width:180px;height:180px; border-width:8px;}
+}
+
+/* Large screens: 1200px and up */
+@media (min-width:1200px){
+  .header-bar{padding:1.25rem 0;}
+  .brand .title{font-size:1.5rem;}
+  .site-nav a{padding:0.6rem 0.9rem;}
+  .page-hero h1{font-size:1.35rem;}
+  .carousel-slide img{height:420px;}
+  .photo-wrap img.photo {width:220px;height:220px;}
+}

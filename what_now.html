@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio — What Now</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site container">
+    <header class="header-bar">
+      <div class="brand">
+        <div class="title">My Portfolio</div>
+        <div class="sitename">Experiences on Web Design</div>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="main_page.html">Main</a>
+        <a href="past_works.html">Past Works</a>
+        <a href="what_now.html" class="active">What Now</a>
+        <button id="dark-toggle" class="toggle-btn" title="Toggle dark mode" aria-pressed="false">🌓</button>
+      </nav>
+    </header>
+
+    <main>
+      <section style="margin-top:0.75rem;">
+        <h1>What am I doing now?</h1>
+        <p class="lead">
+          Well, I still don't know if I'll really work with Web Design. 
+          Maybe I'll try something different next year. But let me know what you thought about my last website.
+        </p>
+
+        <h2>Send me your thoughts</h2>
+<form id="feedback-form">
+  <label>
+    Your Name: <br>
+    <input type="text" name="name" required>
+  </label>
+  <br><br>
+  <label>
+    Message: <br>
+    <textarea name="message" rows="4" required></textarea>
+  </label>
+  <br><br>
+  <button type="submit">Submit</button>
+  <div class="form-error" style="color: var(--p4); margin-top:0.5rem;"></div>
+</form>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Developed by Yanna Santos. Brazilian living in the USA, 2025
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

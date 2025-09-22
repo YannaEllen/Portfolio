@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site container">
+
+    <header class="header-bar" role="banner">
+      <div class="brand" aria-hidden="false">
+        <div class="title">My Portfolio</div>
+        <div class="sitename">Experiences on Web Design</div>
+      </div>
+
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <a href="main_page.html" class="active">Main</a>
+        <a href="past_works.html">Past Works</a>
+        <a href="what_now.html">What Now</a>
+
+        <button id="dark-toggle" class="toggle-btn" title="Toggle dark mode" aria-pressed="false">
+          🌓
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div style="flex:1;">
+          <h1>Web Design for Everybody: Basics of Web Development &amp; Coding</h1>
+          <h1 id="dynamic-greeting"></h1>
+
+          <p class="lead">
+            This website is my final project on the Specialization I'm taking by the University of Michigan available on the Coursera website.
+            Web Design for Everybody: Basics of Web Development &amp; Coding was taught by the professor Colleen Van Lent. In this specialization I had to go through five courses: Introduction to HTML5, Introduction to CSS3, Interactivity with Java Script, Advanced Styling with Responsive Design and last but not least, Web Design for Everybody Capstone.
+          </p>
+
+          <div class="calendar-wrap">
+            <div class="calendar-and-note">
+
+              <iframe class="calendar-embed"
+                src="https://calendar.google.com/calendar/embed?height=360&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%238E24AA&amp;ctz=America%2FNew_York"
+                style="border:0" frameborder="0" scrolling="no" aria-label="Google Calendar"></iframe>
+
+              <aside class="calendar-citation" aria-live="polite">
+                "It took me around 3 months to finish this course and it was a great experience. I learned a lot and it was something I wanted to do for a long time. I'm happy I finally managed to have time to do it."
+              </aside>
+            </div>
+          </div>
+
+          <div class="photo-wrap">
+            <img src="yanna.jpg" alt="Portrait of Yanna Santos" class="photo">
+
+            <p class="bio">
+              My name is Yanna, I'm 26 years old and I'm from Brazil. I came to the USA to work as an Au Pair, and in order to stay here for two years we must take a course during the first year. Many Au Pairs take English courses during their stay here, however, since I was an English Teacher in Brazil I decided I wanted to do something completely different from what I was used to. I always wanted to know more about programming and technology. After talking to some friends from the area I decided to try Web Design.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      Developed by Yanna Santos. Brazilian living in the USA, 2025
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
